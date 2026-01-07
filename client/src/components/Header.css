@@ -1,0 +1,131 @@
+
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Full Header Section Styling */
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Fullscreen height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  z-index: 1; /* Ensure the header stays on top */
+}
+
+/* Background Video Styling */
+.background-video {
+  position: absolute;
+  top: 50%; /* Centers the video vertically */
+  left: 50%; /* Centers the video horizontally */
+  width: 120%; /* Slightly increases the width */
+  height: 120%; /* Slightly increases the height */
+  object-fit: cover; /* Ensures the video covers the entire area */
+  object-position: center center; /* Ensures the video is centered */
+  transform: translate(-50%, -50%); /* Ensures the video is centered */
+  z-index: -2; /* Ensures the video stays behind content */
+  opacity: 1; /* Ensure the video is visible */
+}
+
+/* Overlay for Darkening the Video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensures it sits above the video */
+}
+
+/* Header Content Styling */
+.header-content {
+  z-index: 2; /* Ensures the text content is above the overlay */
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title Styling */
+.header-title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Subtitle Styling */
+.header-subtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 300;
+  color: #d4d4d4;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Button Styling */
+.header-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1e90ff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-button:hover {
+  background: #00bcd4;
+  transform: translateY(-3px);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .header-button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+}

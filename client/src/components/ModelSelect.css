@@ -1,0 +1,59 @@
+/* src/components/ModelSelect.css */
+.model-select {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .model-select h2 {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+  }
+  
+  .model-select select {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00bcd4;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .model-select select:focus {
+    outline: none;
+    border-color: #00bcd4;
+  }
+  
+  .model-select p {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  /* Image Gallery Styling */
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .species-image {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #00bcd4;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .species-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+  }
+  

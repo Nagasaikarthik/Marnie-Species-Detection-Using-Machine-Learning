@@ -1,0 +1,97 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Spans the full width of the screen */
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent background for glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Blurs the background for the glass effect */
+  z-index: 1000; /* Keeps the navbar above other elements */
+  padding: 15px 30px; /* Increased padding for a larger navbar */
+  margin: 0; /* Removes any default margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Container for Navbar Content */
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Positions brand and links on opposite sides */
+  align-items: center;
+  width: 100%; /* Ensures navbar items span the full width */
+}
+
+/* Brand Name Styling */
+.navbar-brand {
+  font-size: 2rem; /* Increased font size for the brand */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #ffffff; /* White text color */
+}
+
+/* Navbar Links Styling */
+.navbar-links {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Aligns links horizontally */
+  gap: 30px; /* Adds spacing between links */
+  margin: 0; /* Ensures no extra margin above/below */
+}
+
+/* Individual Link Styling */
+.navbar-links li {
+  position: relative; /* Needed for the underline hover effect */
+}
+
+.navbar-links li a {
+  text-decoration: none; /* Removes default underlines */
+  color: #ffffff; /* White text color */
+  font-size: 1.2rem; /* Increased font size for links */
+  font-weight: 500; /* Slightly bold text for clarity */
+  padding: 10px 15px; /* Adds padding around the text */
+  transition: color 0.3s, transform 0.3s; /* Smooth animations for hover */
+}
+
+/* Hover Effect for Links */
+.navbar-links li a:hover {
+  color: #1e90ff; /* Changes text color to light blue on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Underline Animation for Links */
+.navbar-links li::after {
+  content: ''; /* Empty content for the underline */
+  position: absolute; /* Positions the underline below the text */
+  width: 0; /* Initially hidden */
+  height: 2px; /* Thickness of the underline */
+  bottom: 0; /* Places the underline at the bottom */
+  left: 50%; /* Centers the underline */
+  background-color: #1e90ff; /* Light blue underline color */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition effect */
+}
+
+.navbar-links li:hover::after {
+  width: 100%; /* Expands the underline fully on hover */
+  left: 0; /* Moves the underline to align with the text */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stacks items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stacks links vertically */
+    gap: 15px; /* Adjusts spacing for vertical layout */
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem; /* Adjust brand size for mobile */
+  }
+
+  .navbar-links li a {
+    font-size: 1.1rem; /* Adjust link font size for mobile */
+  }
+}

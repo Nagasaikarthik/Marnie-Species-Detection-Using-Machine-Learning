@@ -1,0 +1,205 @@
+/* General reset and body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Main heading styles (h1) */
+.heading {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #00bcd4; /* Set the main heading color to a brighter blue */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Navbar styles */
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Video section */
+.video-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.background-video {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Species Info Section */
+.species-info {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.species-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #00bcd4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.species-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Styling for individual cards */
+.card {
+  position: relative;
+  width: 280px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Card image styling */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid #00bcd4;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Hover Effect Description Styling */
+.card .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+.card:hover .description {
+  transform: translateY(0);
+}
+
+/* Footer styling */
+footer {
+  background-color: #121212;
+  padding: 20px;
+  color: #e0e0e0;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+/* File upload and model select section */
+.upload-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.upload-section input[type="file"] {
+  background-color: #00bcd4;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.upload-section .uploaded-filename {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #00bcd4;
+}
+
+/* Detect button */
+.detect-btn-container {
+  margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.detect-btn {
+  background-color: #00bcd4;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.detect-btn:hover {
+  background-color: #0097a7;
+}

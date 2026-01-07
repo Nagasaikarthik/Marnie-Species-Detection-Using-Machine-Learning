@@ -1,0 +1,90 @@
+/* Image upload container */
+.upload-section {
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.upload-section h3 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* File input button styling */
+.upload-section input[type="file"] {
+  display: none; /* Hide default file input */
+}
+
+.upload-section label {
+  font-size: 1.2rem;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-section label:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+
+/* Uploaded image display */
+.upload-section img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  border: 5px solid #00bcd4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Predictions and results */
+.upload-section .predictions {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.upload-section .predictions h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.upload-section .predictions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.upload-section .predictions ul li {
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+.upload-section .predictions ul li span {
+  font-weight: bold;
+}
+
+/* Loader while processing image */
+.upload-section .loader {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.upload-section .loader.active {
+  display: block;
+  color: #00bcd4;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
